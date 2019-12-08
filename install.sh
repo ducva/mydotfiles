@@ -95,7 +95,7 @@ fi
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing zsh-autosuggestions.$(tput sgr 0)"
 echo "---------------------------------------------------------"
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing vtop.$(tput sgr 0)"
