@@ -20,3 +20,6 @@ let g:NERDTreeQuitOnOpen = 1
 
 " don't open Nerdtree when open directory
 let g:NERDTreeHijackNetrw = 0 
+
+" delete buffer when delete file
+let NERDTreeAutoDeleteBuffer = 1
