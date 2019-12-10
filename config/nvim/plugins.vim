@@ -26,24 +26,21 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Code auto suggestion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Fire manager
-Plug 'scrooloose/nerdtree'
-
-" Show git status on nerdtree
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" enhance nerdtree view
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-
 " show gutter
 Plug 'airblade/vim-gitgutter'
 
 " fuzzy find files
-Plug 'ctrlpvim/ctrlp.vim' 
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-" comment
-Plug 'scrooloose/nerdcommenter'
+if has('nvim')
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/denite.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
@@ -56,8 +53,9 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Load plugin settings
-source ~/.config/nvim/nerdtree.vim
 source ~/.config/nvim/coc.vim
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+source ~/.config/nvim/denite.vim
