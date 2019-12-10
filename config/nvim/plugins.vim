@@ -55,6 +55,12 @@ Plug 'christoomey/vim-tmux-navigator'
 " color scheme
 Plug 'morhetz/gruvbox'
 
+" zen mode
+Plug 'junegunn/goyo.vim'
+
+" keep focus
+Plug 'junegunn/limelight.vim'
+
 " Initialize plugin system
 call plug#end()
 

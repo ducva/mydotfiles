@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+" need set this before load limelight
+set termguicolors
 
 " load plugins first
 source ~/.config/nvim/plugins.vim
