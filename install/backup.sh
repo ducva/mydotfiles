@@ -17,11 +17,15 @@ mkdir -p $BACKUP_DIR
 
 files=("$HOME/.config/nvim" "$HOME/.zshrc" "$HOME/.tmux.conf" "$HOME/.config/zsh")
 for filename in "${files[@]}"; do
+    echo $filename
     if [ ! -L $filename ]; then
       echo "---------------------------------------------------------"
       echo "$(tput setaf 2)JARVIS: Backing up $filename.$(tput sgr 0)"
       echo "---------------------------------------------------------"
-      mv $filename $BACKUP_DIR 2>/dev/null
+      if [ -d $filename ]; then
+        echo "$(tput setaf 2)JARVIS: Moving $filename.$(tput sgr 0)"
+        mv $filename $BACKUP_DIR
+      fi
     else
       echo "---------------------------------------------------------"
       echo -e "$(tput setaf 3)JARVIS: $filename does not exist at this location or is a symlink.$(tput sgr 0)"

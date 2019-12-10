@@ -60,7 +60,7 @@ echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing colorls$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
-gem install colorls
+sudo gem install colorls
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
@@ -95,7 +95,13 @@ fi
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing zsh-autosuggestions.$(tput sgr 0)"
 echo "---------------------------------------------------------"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+else
+  echo "---------------------------------------------------------"
+  echo "$(tput setaf 2)JARVIS: zsh-autosuggestions already installed.$(tput sgr 0)"
+  echo "---------------------------------------------------------"
+fi
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing vtop.$(tput sgr 0)"
@@ -108,6 +114,7 @@ echo "---------------------------------------------------------"
 
 source install/backup.sh
 source install/link.sh
+
 nvim +PlugInstall +qall
 nvim +UpdateRemotePlugins +qall
 

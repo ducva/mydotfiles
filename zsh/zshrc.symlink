@@ -54,3 +54,4 @@ source $ZSH/oh-my-zsh.sh
 
 # load my alias
 source $HOME/.config/zsh/myalias.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
