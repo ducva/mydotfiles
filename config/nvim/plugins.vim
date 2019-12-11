@@ -40,13 +40,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-if has('nvim')
-  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/denite.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
@@ -61,10 +54,33 @@ Plug 'junegunn/goyo.vim'
 " keep focus
 Plug 'junegunn/limelight.vim'
 
+"Nerd Tree"
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+augroup nerd_loader
+  autocmd!
+  autocmd VimEnter * silent! autocmd! FileExplorer
+  autocmd BufEnter,BufNew *
+        \  if isdirectory(expand('<amatch>'))
+        \|   call plug#load('nerdtree')
+        \|   execute 'autocmd! nerd_loader'
+        \| endif
+augroup END
+
+" Lint
+Plug 'w0rp/ale'
+
+" Language "
+Plug 'chrisbra/unicode.vim', { 'for': 'journal' }
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'junegunn/vim-easy-align'
+
+" increase search "
+Plug 'haya14busa/is.vim'
+
 " Initialize plugin system
 call plug#end()
 
 " Load plugin settings
 source ~/.config/nvim/coc.vim
-
-source ~/.config/nvim/denite.vim
+source ~/.config/nvim/fzf.vim
+source ~/.config/nvim/nerdtree.vim

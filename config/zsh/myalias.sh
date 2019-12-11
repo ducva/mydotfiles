@@ -58,3 +58,12 @@ fgr() {
      vim $file +$line
   fi
 }
+
+function tabname {
+  if [ -z $TMUX ] ; then
+    printf "\e]1;$@\a"
+  else
+   tmux rename-window "$@"
+  fi
+}
+

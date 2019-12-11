@@ -1,1 +1,2 @@
-" Remap leader key to ,
+" search files"
+map <C-p> :Files<CR>
