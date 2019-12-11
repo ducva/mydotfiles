@@ -56,9 +56,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/myalias.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Setting rg as the default source for fzf
-export FZF_DEFAULT_COMMAND='rg --files'
-
-# Apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
+export FZF_COMPLETION_TRIGGER=''
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion
