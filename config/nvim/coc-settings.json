@@ -8,5 +8,17 @@
     "javascriptreact",
     "typescript.tsx",
     "graphql"
-  ]
+  ],
+  "eslint.filetypes": [
+    "javascriptreact",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx"
+  ],
+  "codeLens.enable": false,
+  "diagnostic.virtualText": true,
+  "tsserver.enableJavascript": true,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.validate.enable": false
 }

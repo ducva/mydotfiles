@@ -66,9 +66,6 @@ augroup nerd_loader
         \| endif
 augroup END
 
-" Lint
-Plug 'w0rp/ale'
-
 " Language "
 Plug 'chrisbra/unicode.vim', { 'for': 'journal' }
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
@@ -77,6 +74,9 @@ Plug 'junegunn/vim-easy-align'
 " increase search "
 Plug 'haya14busa/is.vim'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Initialize plugin system
 call plug#end()
 
@@ -84,3 +84,4 @@ call plug#end()
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/fzf.vim
 source ~/.config/nvim/nerdtree.vim
+source ~/.config/nvim/vim-airline.vim
