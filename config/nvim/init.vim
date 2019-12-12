@@ -4,7 +4,7 @@ scriptencoding utf-8
 set termguicolors
 
 " Remap leader key to ,
-let mapleader=","
+let mapleader=" "
 
 " load plugins first
 source ~/.config/nvim/plugins.vim
