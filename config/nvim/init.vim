@@ -301,3 +301,4 @@ endif
 
 set ttimeout
 set ttimeoutlen=0
+inoremap jk <Esc>
