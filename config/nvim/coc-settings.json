@@ -20,5 +20,7 @@
   "diagnostic.virtualText": true,
   "tsserver.enableJavascript": true,
   "javascript.suggestionActions.enabled": false,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "python.jediEnabled": false,
+  "python.venvPath": "/usr/local/anaconda3/envs"
 }

@@ -16,7 +16,9 @@ if !filereadable(plugpath)
         exit
     endif
 endif
-
+set encoding=utf-8
+let using_neovim = has('nvim')
+let using_vim = !using_neovim
 call plug#begin('~/.config/nvim/plugged')
 
 " === Editing Plugins === "
@@ -153,6 +155,50 @@ Plug 'haya14busa/is.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+
+Plug 'tpope/vim-commentary'
+" {{{
+" plugin settings
+" }}}
+
+Plug 'jiangmiao/auto-pairs'
+" {{{
+" plugin settings
+" }}}
+
+" Plug 'jeetsukumaran/vim-pythonsense'
+" {{{
+" plugin settings
+" }}}
+"
+
+" Plug 'sheerun/vim-polyglot'
+" {{{
+" plugin settings
+" }}}
+
+" Plug 'Vimjas/vim-python-pep8-indent'
+" {{{
+" plugin settings
+" }}}
+
+Plug 'Yggdroot/indentline'
+" {{{
+" plugin settings
+" }}}
+
+" Async autocompletion
+if using_neovim
+    Plug 'Shougo/deoplete.nvim', {'do': ':autocmd VimEnter * UpdateRemotePlugins'}
+else
+    Plug 'Shougo/deoplete.nvim'
+endif
+
+" Completion from other opened files
+Plug 'Shougo/context_filetype.vim'
+" Better language packs
+Plug 'sheerun/vim-polyglot'
 
 " Initialize plugin system
 call plug#end()
