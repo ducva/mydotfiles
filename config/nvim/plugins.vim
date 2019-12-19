@@ -170,6 +170,10 @@ let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
 
 "}}}
 Plug 'vim-airline/vim-airline-themes'
@@ -227,4 +231,3 @@ call plug#end()
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/fzf.vim
 source ~/.config/nvim/nerdtree.vim
-source ~/.config/nvim/vim-airline.vim
