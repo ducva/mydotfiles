@@ -15,7 +15,7 @@ echo "$(tput setaf 2)JARVIS: Creating backup directory at $BACKUP_DIR.$(tput sgr
 echo "---------------------------------------------------------"
 mkdir -p $BACKUP_DIR
 
-files=("$HOME/.config/nvim" "$HOME/.zshrc" "$HOME/.tmux.conf" "$HOME/.config/zsh")
+files=( "$HOME/.config/nvim" "$HOME/.zshrc" "$HOME/.tmux.conf" "$HOME/.config/zsh" "$HOME/.ideavimrc")
 for filename in "${files[@]}"; do
     echo $filename
     if [ ! -L $filename ]; then

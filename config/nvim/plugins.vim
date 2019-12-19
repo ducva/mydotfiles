@@ -154,6 +154,24 @@ Plug 'junegunn/vim-easy-align'
 Plug 'haya14busa/is.vim'
 
 Plug 'vim-airline/vim-airline'
+" {{{
+" plugin settings
+"
+let g:airline_theme='light'
+let g:airline_powerline_fonts = 1
+let g:airline_section_x = '%F'
+" let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#enabled = 1 "Show tablines"
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 1
+
+"}}}
 Plug 'vim-airline/vim-airline-themes'
 
 
@@ -189,16 +207,18 @@ Plug 'Yggdroot/indentline'
 " }}}
 
 " Async autocompletion
-if using_neovim
-    Plug 'Shougo/deoplete.nvim', {'do': ':autocmd VimEnter * UpdateRemotePlugins'}
-else
-    Plug 'Shougo/deoplete.nvim'
-endif
+" if using_neovim
+"     Plug 'Shougo/deoplete.nvim', {'do': ':autocmd VimEnter * UpdateRemotePlugins'}
+" else
+"     Plug 'Shougo/deoplete.nvim'
+" endif
 
 " Completion from other opened files
 Plug 'Shougo/context_filetype.vim'
 " Better language packs
 Plug 'sheerun/vim-polyglot'
+
+Plug 'tpope/vim-surround'
 
 " Initialize plugin system
 call plug#end()
