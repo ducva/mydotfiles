@@ -17,10 +17,7 @@
     "typescript.tsx"
   ],
   "codeLens.enable": false,
-  "diagnostic.virtualText": true,
   "tsserver.enableJavascript": true,
   "javascript.suggestionActions.enabled": false,
-  "javascript.validate.enable": false,
-  "python.jediEnabled": false,
-  "python.venvPath": "/usr/local/anaconda3/envs"
+  "javascript.validate.enable": false
 }
