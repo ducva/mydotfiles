@@ -37,7 +37,9 @@ Plug 'easymotion/vim-easymotion'
 
 " === Javascript Plugins === "
 " Typescript syntax highlighting
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 
 " Code auto suggestion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -105,7 +107,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Language "
 Plug 'chrisbra/unicode.vim', { 'for': 'journal' }
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'junegunn/vim-easy-align'
 " {{{
   let g:easy_align_ignore_comment = 0 " align comments
@@ -221,6 +222,17 @@ Plug 'tpope/vim-fugitive'
 
 " A very fast, multi-syntax context-sensitive color name highlighter
 Plug 'ap/vim-css-color'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ }
 
 call plug#end()
 

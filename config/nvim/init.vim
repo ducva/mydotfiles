@@ -166,3 +166,12 @@ set ttimeout
 set ttimeoutlen=0
 
 inoremap jk <Esc>
+set completeopt-=preview
+
+let g:LanguageClient_serverCommands = {
+\ 'javascript': ['javascript-typescript-langserver',  '--stdio'],
+\ 'javascript.jsx': ['javascript-typescript-langserver',  '--stdio'],
+\ 'typescript': ['typescript-language-server',  '--stdio'],
+\ 'typescript.tsx': ['typescript-language-server',  '--stdio'],
+    \ }
+nnoremap <leader>l :call LanguageClient_contextMenu()<CR>
