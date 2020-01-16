@@ -175,3 +175,7 @@ let g:LanguageClient_serverCommands = {
 \ 'typescript.tsx': ['typescript-language-server',  '--stdio'],
     \ }
 nnoremap <leader>l :call LanguageClient_contextMenu()<CR>
+
+" there are always at least 10 lines visible above the cursor and 5 lines
+" bellow the cursor
+set scrolloff=10
