@@ -166,7 +166,7 @@ set ttimeout
 set ttimeoutlen=0
 
 inoremap jk <Esc>
-set completeopt-=preview
+" set completeopt-=preview
 
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['javascript-typescript-langserver',  '--stdio'],

@@ -35,8 +35,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-json',
-  \ 'coc-emmet',
-  \ 'coc-yank'
+  \ 'coc-css',
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.
@@ -163,5 +162,9 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+" allow comments in tsconfig.json file
+" tsconfig.json is actually jsonc, help TypeScript set the correct filetype
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 
 endif

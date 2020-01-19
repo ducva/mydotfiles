@@ -234,6 +234,9 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript.jsx': ['/usr/local/bin/javascript-typescript-stdio'],
     \ }
 
+
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
 call plug#end()
 
 source ~/.config/nvim/coc.vim
