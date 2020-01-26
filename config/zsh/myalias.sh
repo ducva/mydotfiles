@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Setting rg as the default source for fzf
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!node_modules' -g '!ios'"
 export FZF_DEFAULT_OPTS='--bind tab:down --cycle'
 # Apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

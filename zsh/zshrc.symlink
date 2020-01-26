@@ -41,6 +41,7 @@ source /usr/local/etc/profile.d/z.sh
 
 # Set default editor to nvim
 export EDITOR='nvim'
+export TERM='xterm-256color'
 
 # Enabled true color support for terminals
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -64,9 +65,3 @@ bindkey '^I' $fzf_default_completion
 source $HOME/.config/zsh/prompt.sh
 
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/michael/.config/yarn/global/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/michael/.config/yarn/global/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/michael/.config/yarn/global/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/michael/.config/yarn/global/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

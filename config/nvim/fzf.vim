@@ -50,7 +50,7 @@
   " All files
   command! -nargs=? -complete=dir AF
     \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
-    \   'source': 'fd --type f --hidden --follow --exclude .git --no-ignore . '.expand(<q-args>)
+    \   'source': 'fd --type f --hidden --follow --exclude .git --exclude node_modules --no-ignore . '.expand(<q-args>)
     \ })))
 
   let g:fzf_colors =
