@@ -86,3 +86,4 @@ function tabname {
   fi
 }
 
+alias vf='vifm .'

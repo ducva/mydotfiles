@@ -1,0 +1,137 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/Users/michael/
+	..
+1589821401
+'b
+	/Users/michael/bin/
+	..
+1589821401
+'h
+	/Users/michael/
+	..
+1589821401
+'z
+	/Users/michael/.config/vifm
+	..
+1589821401
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/Users/michael
+	Downloads
+6
+d/Users/michael/Downloads
+	..
+0
+d/Users/michael
+	Pictures
+10
+d/Users/michael/0_works/swiftai
+	Sources
+1
+d/Users/michael/0_works/swiftai/Sources
+	SwiftAI
+1
+d/Users/michael/0_works/swiftai/Sources/SwiftAI
+	..
+0
+d/Users/michael/0_works/swiftai/Sources
+	..
+0
+d/Users/michael/0_works/swiftai
+	Dockerfile
+5
+d/Users/michael/.config/alacritty
+	alacritty.yml
+1
+d
+
+# Right window history (oldest to newest):
+D/Users/michael
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/Users/michael/.local/share/vifm/Trash/000_iTerm2-3_3_7beta2.zip
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/Users/michael/.local/share/vifm/Trash/000_Install Spotify.app
+	/Users/michael/Downloads/Install Spotify.app
+t/Users/michael/.local/share/vifm/Trash/000_michael-learn-to-code.github.io-master
+	/Users/michael/Downloads/michael-learn-to-code.github.io-master
+t/Users/michael/.local/share/vifm/Trash/000_michael-learn-to-code.github.io-master 2
+	/Users/michael/Downloads/michael-learn-to-code.github.io-master 2
+t/Users/michael/.local/share/vifm/Trash/000_Docker.dmg
+	/Users/michael/Downloads/Docker.dmg
+t/Users/michael/.local/share/vifm/Trash/000_Firefox 70.0.1.dmg
+	/Users/michael/Downloads/Firefox 70.0.1.dmg
+t/Users/michael/.local/share/vifm/Trash/000_GoTiengViet.dmg
+	/Users/michael/Downloads/GoTiengViet.dmg
+t/Users/michael/.local/share/vifm/Trash/000_GoogleChrome.dmg
+	/Users/michael/Downloads/GoogleChrome.dmg
+t/Users/michael/.local/share/vifm/Trash/000_Harpoon.zip
+	/Users/michael/Downloads/Harpoon.zip
+t/Users/michael/.local/share/vifm/Trash/000_Joplin-1.0.173.dmg
+	/Users/michael/Downloads/Joplin-1.0.173.dmg
+t/Users/michael/.local/share/vifm/Trash/000_Minecraft.dmg
+	/Users/michael/Downloads/Minecraft.dmg
+t/Users/michael/.local/share/vifm/Trash/000_Notion-2.0.7.dmg
+	/Users/michael/Downloads/Notion-2.0.7.dmg
+t/Users/michael/.local/share/vifm/Trash/000_Paste_Helper.zip
+	/Users/michael/Downloads/Paste_Helper.zip
+t/Users/michael/.local/share/vifm/Trash/000_Reactotron-2.17.1.dmg
+	/Users/michael/Downloads/Reactotron-2.17.1.dmg
+t/Users/michael/.local/share/vifm/Trash/000_SpotifyInstaller.zip
+	/Users/michael/Downloads/SpotifyInstaller.zip
+t/Users/michael/.local/share/vifm/Trash/000_VSCode-darwin-insider.zip
+	/Users/michael/Downloads/VSCode-darwin-insider.zip
+t/Users/michael/.local/share/vifm/Trash/000_VSCode-darwin-stable.zip
+	/Users/michael/Downloads/VSCode-darwin-stable.zip
+t/Users/michael/.local/share/vifm/Trash/000_XMind-2020-for-macOS-10.1.3-202005060027.dmg
+	/Users/michael/Downloads/XMind-2020-for-macOS-10.1.3-202005060027.dmg
+t/Users/michael/.local/share/vifm/Trash/000_android-studio-ide-191.5977832-mac.dmg
+	/Users/michael/Downloads/android-studio-ide-191.5977832-mac.dmg
+t/Users/michael/.local/share/vifm/Trash/000_azuredatastudio-macos-1.14.1.zip
+	/Users/michael/Downloads/azuredatastudio-macos-1.14.1.zip
+t/Users/michael/.local/share/vifm/Trash/000_baduK-0.1.1.dmg
+	/Users/michael/Downloads/baduK-0.1.1.dmg
+t/Users/michael/.local/share/vifm/Trash/000_cgoban.dmg
+	/Users/michael/Downloads/cgoban.dmg
+t/Users/michael/.local/share/vifm/Trash/000_iTerm2-3_3_7beta2.zip
+	/Users/michael/Downloads/iTerm2-3_3_7beta2.zip
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0

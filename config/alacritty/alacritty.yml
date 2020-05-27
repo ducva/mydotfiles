@@ -23,4 +23,7 @@ window:
     y: 0
 
 font:
-  size: 14
+  size: 15
+key_bindings:
+  - { key: Home,     chars: "\x1b[1;3H"                       }
+  - { key: End,      chars: "\x1b[1;3F"                       }
