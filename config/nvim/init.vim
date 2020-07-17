@@ -179,3 +179,13 @@ nnoremap <leader>l :call LanguageClient_contextMenu()<CR>
 " there are always at least 10 lines visible above the cursor and 5 lines
 " bellow the cursor
 set scrolloff=10
+
+" setup neovim-ruby-host
+let g:ruby_host_prog='/usr/local/bin/neovim-ruby-host'
+
+" setup prefer python version
+
+set pyxversion=3
+
+" setup python3 provider
+let g:python3_host_prog='/usr/local/bin/python3'
