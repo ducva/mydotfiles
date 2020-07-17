@@ -56,11 +56,11 @@ echo "---------------------------------------------------------"
 
 npm install -g neovim
 
-echo "---------------------------------------------------------"
-echo "$(tput setaf 2)JARVIS: Installing colorls$(tput sgr 0)"
-echo "---------------------------------------------------------"
+# echo "---------------------------------------------------------"
+# echo "$(tput setaf 2)JARVIS: Installing colorls$(tput sgr 0)"
+# echo "---------------------------------------------------------"
 
-sudo gem install colorls
+# sudo gem install colorls
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
@@ -113,6 +113,7 @@ echo "$(tput setaf 2)JARVIS: Installing Neovim plugins and linking dotfiles.$(tp
 echo "---------------------------------------------------------"
 
 source install/backup.sh
+source install/install_apps.sh
 source install/link.sh
 
 nvim +PlugInstall +qall
