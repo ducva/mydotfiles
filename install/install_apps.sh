@@ -8,6 +8,9 @@ brew tap homebrew/cask-versions
 #  editors
 brew cask install visual-studio-code-insiders
 
+# enable Press and repeat key in VsCode Insider
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+
 # ultilties
 brew cask install alfred
 
