@@ -55,7 +55,7 @@ alias ls="colorls -lA --sd"
 source $ZSH/oh-my-zsh.sh
 
 # load my alias
-source $HOME/.config/zsh/myalias.sh
+# source $HOME/.config/zsh/myalias.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export FZF_COMPLETION_TRIGGER=''
@@ -63,9 +63,14 @@ bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 
 # custom prompt
-source $HOME/.config/zsh/prompt.sh
+# source $HOME/.config/zsh/prompt.sh
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 
+# load custom scripts
+for f in $HOME/.config/zsh/*.sh
+do
+  source $f
+done
