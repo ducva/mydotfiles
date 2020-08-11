@@ -9,7 +9,7 @@ set showmode
 set surround
 
 inoremap jk <Esc>
-vnoremap jk <Esc>
+" vnoremap jk <Esc>
 
 noremap  <c-f> <c-d>
 noremap  <c-b> <c-u>
@@ -68,3 +68,4 @@ nnoremap <leader>w{ :action :cursive.actions.paredit/wrap-curly<cr>
 nnoremap <leader>w" :action :cursive.actions.paredit/wrap-quotes<cr>
 nnoremap <leader>< :action :cursive.actions.paredit/barf-forwards<cr>
 nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr> 
+set clipboard+=ideaput
