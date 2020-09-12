@@ -74,3 +74,9 @@ for f in $HOME/.config/zsh/*.sh
 do
   source $f
 done
+
+
+# init starship
+eval "$(starship init zsh)"
+
+DISABLE_UNTRACKED_FILES_DIRTY="true"

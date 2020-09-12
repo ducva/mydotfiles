@@ -13,6 +13,9 @@ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
 # ultilties
 brew cask install alfred
+brew install starship
+brew install fd
+brew install jesseduffield/lazydocker/lazydocker
 
 # cvs
 brew cask install sourcetree

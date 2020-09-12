@@ -1,5 +1,5 @@
 let mapleader = ' '
-
+set easymotion
 set number
 set incsearch hlsearch
 set ignorecase smartcase
@@ -12,7 +12,7 @@ inoremap jk <Esc>
 " vnoremap jk <Esc>
 
 noremap  <c-f> <c-d>
-noremap  <c-b> <c-u>
+noremap  <c-b> <c-u
 " VimMotionJump{Next,Previous}
 nnoremap <c-p> <c-i>
 nnoremap <c-[> <c-t>
@@ -31,7 +31,7 @@ nnoremap ]d :action QuickImplementations<cr>
 
 nnoremap gcc :action CommentByLineComment<cr>
 
-nnoremap <leader><leader> :action SearchEverywhere<cr>
+" nnoremap <leader><leader> :action SearchEverywhere<cr>
 nnoremap <leader>ff :action FindInPath<cr>
 nnoremap <leader>fu :action FindUsages<cr>
 nnoremap<leader>su :action ShowUsages<cr>
