@@ -91,3 +91,31 @@ alias vf='vifm .'
 # connect resola dev
 #
 alias resola-dev='aws ssm start-session --target `aws ec2 describe-instances --filters "Name=tag:Name,Values=rebot-dev-env" --query "Reservations[*].Instances[*].{Instance:InstanceId}" --output text`'
+
+# view diff with fzf
+fd() {
+  preview="git diff $@ --color=always -- {-1}"
+  git diff $@ --name-only | fzf -m --ansi --preview $preview
+}
+
+# fshow - git commit browser
+fshow() {
+  local out sha q
+  while out=$(
+      git log --graph --color=always \
+          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+      fzf --ansi --multi --no-sort --reverse --query="$q" --print-query); do
+    q=$(head -1 <<< "$out")
+    while read sha; do
+      git show --color=always $sha | less -R
+    done < <(sed '1d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
+  done
+}
+
+gitb() {
+  if [ $# -eq 0 ]; then
+    git branch | fzf --print0 -m | tr -d '[:space:]*' |xargs -0 -t -o git checkout
+  else
+    git checkout "$@"
+  fi
+}

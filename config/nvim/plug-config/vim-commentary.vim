@@ -6,3 +6,4 @@ function! Comment()
   endif
  endfunction
 vnoremap <silent> <space>/ :call Comment()
+vnoremap gcc :call Comment()

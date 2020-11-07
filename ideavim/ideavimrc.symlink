@@ -1,6 +1,7 @@
 let mapleader = ' '
 set easymotion
 set number
+set relativenumber
 set incsearch hlsearch
 set ignorecase smartcase
 set clipboard=unnamed

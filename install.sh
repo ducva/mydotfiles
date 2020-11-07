@@ -35,8 +35,7 @@ packages=(
   "zsh"
   "ripgrep"
   "fzf"
-  "z",
-  "ranger"
+  "z"
 )
 
 for i in "${packages[@]}"
@@ -61,7 +60,7 @@ npm install -g neovim
 # echo "$(tput setaf 2)JARVIS: Installing colorls$(tput sgr 0)"
 # echo "---------------------------------------------------------"
 
-# sudo gem install colorls
+sudo gem install colorls
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"

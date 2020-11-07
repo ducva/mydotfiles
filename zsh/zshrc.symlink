@@ -27,7 +27,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node brew fzf tmux 
+
+plugins=(
+  aws
+  git
+  node
+  brew
+  fzf
+  tmux 
   history-substring-search
   zsh-autosuggestions
   virtualenv
@@ -80,3 +87,5 @@ done
 eval "$(starship init zsh)"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/bitcomplete bit
