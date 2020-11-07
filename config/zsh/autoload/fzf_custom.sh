@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-
 # Setting rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!node_modules' -g '!ios'"
 export FZF_DEFAULT_OPTS='--bind tab:down --cycle'
@@ -86,36 +85,48 @@ function tabname {
   fi
 }
 
-alias vf='vifm .'
+# filter result with fzf. `npm search react Z` => `npm search react | fzf`
+alias -g Z='| fzf'
 
-# connect resola dev
-#
-alias resola-dev='aws ssm start-session --target `aws ec2 describe-instances --filters "Name=tag:Name,Values=rebot-dev-env" --query "Reservations[*].Instances[*].{Instance:InstanceId}" --output text`'
-
-# view diff with fzf
-fd() {
-  preview="git diff $@ --color=always -- {-1}"
-  git diff $@ --name-only | fzf -m --ansi --preview $preview
+b() {
+  local bookmarks_path=~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
+  local jq_script='def ancestors: while(. | length >= 2; del(.[-1,-2])); . as $in | paths(.url?) as $key | $in | getpath($key) | {name,url, path: [$key[0:-2] | ancestors as $a | $in | getpath($a) | .name?] | reverse | join("/") } | .path + "/" + .name + "\t" + .url'
+  jq -r $jq_script < "$bookmarks_path" \
+  | sed -E $'s/(.*)\t(.*)/\\1\t\x1b[36m\\2\x1b[m/g' \
+  | fzf --ansi \
+  | cut -d$'\t' -f2 \
+  | xargs open
 }
 
-# fshow - git commit browser
-fshow() {
-  local out sha q
-  while out=$(
-      git log --graph --color=always \
-          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
-      fzf --ansi --multi --no-sort --reverse --query="$q" --print-query); do
-    q=$(head -1 <<< "$out")
-    while read sha; do
-      git show --color=always $sha | less -R
-    done < <(sed '1d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
-  done
+# fkill - kill processes - list only the ones you can kill. Modified the earlier script.
+fkill() {
+    local pid 
+    if [ "$UID" != "0" ]; then
+        pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
+    else
+        pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+    fi  
+
+    if [ "x$pid" != "x" ]
+    then
+        echo $pid | xargs kill -${1:-9}
+    fi  
+}
+# Same as above, but allows multi selection:
+function drm() {
+  docker ps -a | sed 1d | fzf -q "$1" --no-sort -m --tac | awk '{ print $1 }' | xargs -r docker rm
+}
+# Select a docker image or images to remove
+function drmi() {
+  docker images | sed 1d | fzf -q "$1" --no-sort -m --tac | awk '{ print $3 }' | xargs -r docker rmi
 }
 
-gitb() {
-  if [ $# -eq 0 ]; then
-    git branch | fzf --print0 -m | tr -d '[:space:]*' |xargs -0 -t -o git checkout
-  else
-    git checkout "$@"
-  fi
+##### GIT #####
+# fbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
+fbr() {
+  local branches branch
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
