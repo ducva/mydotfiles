@@ -36,7 +36,8 @@ packages=(
   "ripgrep"
   "fzf"
   "z",
-  "jq"
+  "jq",
+  "tldr"
 )
 
 for i in "${packages[@]}"

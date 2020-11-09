@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
 # Setting rg as the default source for fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!node_modules' -g '!ios'"
 export FZF_DEFAULT_OPTS='--bind tab:down --cycle'
