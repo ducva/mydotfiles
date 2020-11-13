@@ -1,3 +1,8 @@
+# Load Antigen
+source $HOME/antigen.zsh
+# Load Antigen configurations
+antigen init ~/.antigenrc
+
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -39,6 +44,7 @@ plugins=(
   zsh-autosuggestions
   virtualenv
   forgit
+  poetry
 )
 
 # Set location of z installation
@@ -85,3 +91,4 @@ done
 eval "$(starship init zsh)"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+export PATH="$HOME/.poetry/bin:$PATH"
