@@ -139,7 +139,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     " Plug 'arcticicestudio/nord-vim'
     " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'
     " Making stuff
     " Plug 'neomake/neomake'

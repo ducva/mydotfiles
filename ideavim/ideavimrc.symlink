@@ -9,8 +9,9 @@ set scrolloff=5
 set showmode
 set surround
 
+"Enable
 inoremap jk <Esc>
-" vnoremap jk <Esc>
+inoremap jj <Esc>
 
 noremap  <c-f> <c-d>
 noremap  <c-b> <c-u
