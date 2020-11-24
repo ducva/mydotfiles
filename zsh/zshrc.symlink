@@ -35,7 +35,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
   aws
-  git
+  gitfast
   node
   brew
   fzf
@@ -92,3 +92,4 @@ eval "$(starship init zsh)"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 export PATH="$HOME/.poetry/bin:$PATH"
+source $ZSH/plugins/gitfast/git-prompt.sh

@@ -5,3 +5,4 @@ function virtualenv_info {
 }
 
 RPROMPT+='%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}%'
+PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
